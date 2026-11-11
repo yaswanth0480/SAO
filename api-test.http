@@ -1,0 +1,33 @@
+
+# #  Test Student Login
+# # #POST http://localhost:5000/api/v1/auth/login
+# # Content-Type: application/json
+
+# # {
+# #   "email": "student@example.com",
+# #   "password": "Student@123"
+# # }
+# #Current Student
+# GET http://localhost:5000/api/v1/auth/me
+# #Student Logout
+# POST http://localhost:5000/api/v1/auth/logout
+# Check Session After Logout
+# GET http://localhost:5000/api/v1/auth/me
+
+### 1. STUDENT LOGIN
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "Student@123"
+}
+
+### 2. CHECK CURRENT STUDENT
+GET http://localhost:5000/api/v1/auth/me
+
+### 3. STUDENT LOGOUT
+POST http://localhost:5000/api/v1/auth/logout
+
+### 4. CHECK SESSION AFTER LOGOUT
+GET http://localhost:5000/api/v1/auth/me
